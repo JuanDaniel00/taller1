@@ -1,14 +1,10 @@
 <fieldset style ="float: left; width: 30%">
     <legend>Resultado</legend>
     <?php
-        $pesos = (int)$_GET["pesos"];
-        
-        if(isset($_GET["usd"])){
-            echo("<h1>La cantidad ingresada de COP corresponde a :  ". ($pesos / 4414)." USD</h1>"). "<br>";
-        }
-        elseif(isset($_GET["eur"])){
-            echo("<h1>La cantidad ingresada de COP corresponde a:  ". ($pesos / 4511)." EUR</h1>"). "<br>";
-        }
+        $radio = (int)$_GET["radio"];
+        echo("<h1>El Area es: ". round(pi()*pow($radio,2),1) ."cm²</h1>"."<br>");
+
+        echo("<h1>El Perimetro es: ". round(2*pi()*$radio, 1) ."cm</h1>"."<br>");
     ?>
     <input type = "submit" value = "Atrás" onclick ="history.back()">
-</fieldset>s
+</fieldset>
